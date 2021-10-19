@@ -1,13 +1,26 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import facebook from '../../image/icon/facebook.png';
 import google from '../../image/icon/google.png';
 import './Login.css';
 
 const Login = () => {
-    const { googleSign, facebookSign,handleLogin,handleEmail,handlePassword,error } = useAuth();
+    const { googleSign, facebookSign, handleLogin, handleEmail, handlePassword, error, setError, setUser, } = useAuth();
+    const history = useHistory();
+    const location = useLocation();
+    const redirect_ui = location.state?.from || '/home';
+
+    const handleGoogleSignin = () => {
+        googleSign()
+        .then(result => {
+            setUser(result.user);
+            history.push(redirect_ui);
+        }).catch(err => {
+            setError(err.message)
+        })
+    }
     return (
         <Container>
             <div className='d-flex justify-content-center align-items-center mt-3 mb-5 text-center'>
@@ -30,7 +43,7 @@ const Login = () => {
                     <h6>or</h6>
                     <p className='text-left'>Create new Account? <Link to='/register'>Sign Up</Link></p>
                     <div className='d-flex'>
-                        <div onClick={googleSign} className='login-icon'><img src={google} alt="" /> Continue With Google</div>
+                        <div onClick={handleGoogleSignin} className='login-icon'><img src={google} alt="" /> Continue With Google</div>
                         <div onClick={facebookSign} className='login-icon'><img src={facebook} alt="" /> Continue With Facebook</div>
                     </div>
                 </div>

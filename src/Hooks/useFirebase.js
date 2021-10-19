@@ -55,12 +55,7 @@ const useFirebase = () => {
     //google
     const googleSign = () => {
         const googleProvider = new GoogleAuthProvider()
-        signInWithPopup(auth, googleProvider)
-        .then(result =>{
-            setUser(result.user)
-        }).catch(err => {
-            setError(err.message)
-        })
+        return signInWithPopup(auth, googleProvider)
     }
     //google
     const facebookSign = () => {
@@ -99,6 +94,8 @@ const useFirebase = () => {
     return {
         user,
         error,
+        setUser,
+        setError,
         logOut,
         googleSign,
         facebookSign,

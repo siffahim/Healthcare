@@ -11,6 +11,7 @@ import Laboratory from './components/Laboratory/Laboratory';
 import Login from './components/Login/Login';
 import News from './components/News/News';
 import NotFound from './components/NotFound/NotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 
 
@@ -41,9 +42,9 @@ function App() {
           <Route path='/register'>
             <Register />
           </Route>
-          <Route path='/service/:serviceId'>
+          <PrivateRoute path='/service/:serviceId'>
             <Detail />
-          </Route>
+          </PrivateRoute>
           <Route path='*'>
             <NotFound />
           </Route>
