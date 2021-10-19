@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../Hooks/useFirebase';
+import useAuth from '../../Hooks/useAuth';
 import facebook from '../../image/icon/facebook.png';
 import google from '../../image/icon/google.png';
 import './Login.css';
 
 const Login = () => {
-    const { googleSign, facebookSign,handleLogin,handleEmail,handlePassword,error } = useFirebase();
+    const { googleSign, facebookSign,handleLogin,handleEmail,handlePassword,error } = useAuth();
     return (
         <Container>
             <div className='d-flex justify-content-center align-items-center mt-3 mb-5 text-center'>
