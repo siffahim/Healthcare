@@ -1,0 +1,33 @@
+.banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background:linear-gradient(#000000c2,#000000c2),url('../../image/banner-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+}
+.btn-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #19ce67;
+    border: none;
+    background:transparent;
+    outline: none;
+    animation: media 1s  infinite;
+}
+
+@keyframes media {
+    to{
+        box-shadow: 0 0 3px 5px #05fb701f;
+        transform: scale(1.1);
+    }
+}

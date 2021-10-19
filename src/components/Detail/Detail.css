@@ -1,0 +1,9 @@
+.spe-list{
+    box-shadow: 0 0 5px gray;
+    margin-left: 30px;
+    color: #fff;
+}
+.spe-content{
+    padding: 15px 0;
+    background-color: #16ce67;
+}
