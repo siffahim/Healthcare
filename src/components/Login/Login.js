@@ -3,11 +3,13 @@ import { Container } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import facebook from '../../image/icon/facebook.png';
+import github from '../../image/icon/github.png';
 import google from '../../image/icon/google.png';
 import './Login.css';
 
+
 const Login = () => {
-    const { googleSign, facebookSign, handleLogin, handleEmail, handlePassword, error, setError, setUser, } = useAuth();
+    const { googleSign,githubSign, facebookSign, handleLogin, handleEmail, handlePassword, error, setError, setUser, } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect_ui = location.state?.from || '/home';
@@ -23,10 +25,12 @@ const Login = () => {
     }
     return (
         <Container>
-            <div className='d-flex justify-content-center align-items-center mt-3 mb-5 text-center'>
+            <div className='w-50 my-2 mx-auto'>
                 <div className='form-content'>
-                    <img style={{width:'50px'}} src='favicon.ico' alt="" />
-                    <h2>Sign In</h2>
+                    <div className='text-center'>
+                        <img style={{ width: '50px' }} src='favicon.ico' alt="" />
+                        <h2 className='my-2 mb-4 text-muted'>Log In</h2>
+                    </div>
                     <form onSubmit={handleLogin}>
                         <div className="form-floating mb-3">
                             <input type="email" onBlur={handleEmail} className="form-control" id="floatingInput" placeholder="name@example.com"/>
@@ -37,16 +41,18 @@ const Login = () => {
                             <label htmlFor="floatingPassword">Password</label>
                         </div>
                         <p className='text-danger'><small>{error}</small></p>
-                        <input type="submit" value='Sign In' className='btn-form' />
+                        <input type="submit" value='Log In' className='btn-form' />
                     </form>
                     <br />
-                    <h6>or</h6>
-                    <p className='text-left'>Create new Account? <Link to='/register'>Sign Up</Link></p>
-                    <div className='d-flex'>
-                        <div onClick={handleGoogleSignin} className='login-icon'><img src={google} alt="" /> Continue With Google</div>
-                        <div onClick={facebookSign} className='login-icon'><img src={facebook} alt="" /> Continue With Facebook</div>
+                    <h5 className='text-center'>______or______</h5>
+                    <p className='text-left text-muted'>create new account? <Link to='/register'>Register</Link></p>
+              
+                <div className='d-flex justify-content-center'>
+                    <button onClick={handleGoogleSignin} className='login-icon'><img src={google} alt="" /></button>
+                    <button onClick={facebookSign} className='login-icon'><img src={facebook} alt="" /></button>
+                    <button onClick={githubSign} className='login-icon'><img src={github} alt="" /></button>
                     </div>
-                </div>
+               </div>
             </div>
         </Container>
     );

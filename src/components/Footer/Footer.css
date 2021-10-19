@@ -36,7 +36,8 @@
     border: none;
     background-color: #19ce67;
     color: #fff;
-    padding: 8px 15px;
+    padding: 9px 15px;
+    border-radius: 3px;
     transition: 0.5s;
     position: relative;
     z-index: 99;

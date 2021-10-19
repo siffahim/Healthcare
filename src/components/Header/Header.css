@@ -1,0 +1,22 @@
+.header{
+    box-shadow:0 0 5px rgb(0,0,0,0.2);
+}
+.item{
+    color:black;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+.item:hover{
+    border: none;
+    background-color: #19ce67;
+    color: #fff;
+    transition: 0.5s;
+}
+.btn-fix{
+    border: none;
+    background-color: #19ce67;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 5px;
+}

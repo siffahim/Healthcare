@@ -1,14 +1,5 @@
 .banner-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background:linear-gradient(#000000c2,#000000c2),url('../../image/banner-1.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 500px;
+    background-color: #242121;
 }
 .btn-media{
     display: flex;
