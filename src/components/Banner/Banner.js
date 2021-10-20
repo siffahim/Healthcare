@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import banner from '../../image/banner (2).png';
+import banner from '../../image/doctor3.svg';
 import './Banner.css';
 
 const Banner = () => {
@@ -22,7 +22,7 @@ const Banner = () => {
                     </div>
                 </div>
             </Container>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
                 <path fill="#16ce67" fill-opacity="1" d="M0,224L1440,96L1440,320L0,320Z"></path>
             </svg>
         </div>

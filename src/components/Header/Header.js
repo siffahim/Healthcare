@@ -20,9 +20,9 @@ const Header = () => {
                     <Nav.Link as={Link} className='item' to="/home">Home</Nav.Link>
                     <Nav.Link as={HashLink} className='item' to="/home#service">Service</Nav.Link>
                     <Nav.Link as={Link} className='item' to="/news">News</Nav.Link>
-                    <Nav.Link as={Link} className='item' to="/laboratory">Laboratory</Nav.Link>
                     <Nav.Link as={Link} className='item' to="/link">Link</Nav.Link>
                     <Nav.Link as={Link} className='item' to="/about">About Us</Nav.Link>
+                    <Nav.Link as={Link} className='item' to="/laboratory">Laboratory</Nav.Link>
                     {
                         user.displayName && <div>
                             <img style={{ width: '40px', height: '40px', borderRadius: '50%', marginRight: '5px' }} src={user.photoURL} alt={user.displayName} />
