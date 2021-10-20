@@ -34,8 +34,15 @@
     .info-container{
         flex-direction: column;
     }
+    .bg-icon{
+        margin: 8px auto;
+    }
     .info-text{
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .containr-trainer{
+        grid-template-columns: repeat(1,1fr);
     }
 }

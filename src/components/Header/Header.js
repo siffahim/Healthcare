@@ -21,7 +21,7 @@ const Header = () => {
                     <Nav.Link as={HashLink} className='item' to="/home#service">Service</Nav.Link>
                     <Nav.Link as={Link} className='item' to="/news">News</Nav.Link>
                     <Nav.Link as={Link} className='item' to="/link">Link</Nav.Link>
-                    <Nav.Link as={Link} className='item' to="/about">About Us</Nav.Link>
+                    <Nav.Link as={Link} className='item' to="/about">About</Nav.Link>
                     <Nav.Link as={Link} className='item' to="/laboratory">Laboratory</Nav.Link>
                     {
                         user.displayName && <div>

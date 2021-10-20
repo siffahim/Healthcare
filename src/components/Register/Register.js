@@ -19,19 +19,19 @@ const Register = () => {
                     </div>
                     <form onSubmit={handleRegister}>
                         <div className="form-floating mb-3">
-                            <input type="name" onBlur={handleName} className="form-control" id="floatingName" placeholder="name@example.com" />
+                            <input type="name" onBlur={handleName} className="form-control" id="floatingName" placeholder="name@example.com" required />
                             <label htmlFor="floatingName">Name</label>
                         </div>
                         <div className="form-floating mb-3">
-                            <input type="email" onBlur={handleEmail} className="form-control" id="floatingInput" placeholder="name@example.com" />
+                            <input type="email" onBlur={handleEmail} className="form-control" id="floatingInput" placeholder="name@example.com" required />
                             <label htmlFor="floatingInput">Email address</label>
                         </div>
                         <div className="form-floating">
-                            <input type="password" onBlur={handlePassword} className="form-control" id="floatingPassword" placeholder="Password" />
+                            <input type="password" onBlur={handlePassword} className="form-control" id="floatingPassword" placeholder="Password" required />
                             <label htmlFor="floatingPassword">Password</label>
                         </div>
                         <div className="form-floating">
-                            <input type="password" onBlur={handlePassword} className="form-control" id="floatingRePassword" placeholder="Re-type Password" />
+                            <input type="password" onBlur={handlePassword} className="form-control" id="floatingRePassword" placeholder="Re-type Password" required />
                             <label htmlFor="floatingRePassword">Re-type Password</label>
                         </div>
                         <p className='text-danger'><small>{error}</small></p>

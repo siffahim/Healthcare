@@ -14,6 +14,7 @@ const Login = () => {
     const location = useLocation();
     const redirect_ui = location.state?.from || '/home';
     console.log(isLoad)
+    //google
     const handleGoogleSignin = () => {
         setIsLoad(true)
         googleSign()
@@ -24,6 +25,43 @@ const Login = () => {
             setError(err.message)
         }).finally(()=> setIsLoad(false))
     }
+
+    //facebook
+    const handleFacebookSignin = () => {
+        setIsLoad(true)
+        facebookSign()
+            .then(result => {
+                setUser(result.user);
+                history.push(redirect_ui);
+            }).catch(err => {
+                setError(err.message)
+            }).finally(() => setIsLoad(false))
+    }
+
+    //github
+    const handleGithubSignin = () => {
+        setIsLoad(true)
+        githubSign()
+            .then(result => {
+                setUser(result.user);
+                history.push(redirect_ui);
+            }).catch(err => {
+                setError(err.message)
+            }).finally(() => setIsLoad(false))
+    }
+
+    //login
+    const handleUseingLogin = (e) => {
+        e.preventDefault();
+            handleLogin()
+            .then(result => {
+                setUser(result.user)
+                history.push(redirect_ui);
+                setError('');
+            }).catch(err => {
+                setError(err.message)
+            })
+    }
     return (
         <Container>
             <div className='w-50 my-2 mx-auto'>
@@ -32,13 +70,13 @@ const Login = () => {
                         <img style={{ width: '50px' }} src='favicon.ico' alt="" />
                         <h2 className='my-2 mb-4 text-muted'>Log In</h2>
                     </div>
-                    <form onSubmit={handleLogin}>
+                    <form onSubmit={handleUseingLogin}>
                         <div className="form-floating mb-3">
-                            <input type="email" onBlur={handleEmail} className="form-control" id="floatingInput" placeholder="name@example.com"/>
+                            <input type="email" onBlur={handleEmail} className="form-control" id="floatingInput" placeholder="name@example.com" required />
                             <label htmlFor="floatingInput">Email address</label>
                         </div>
                         <div className="form-floating">
-                            <input type="password" onBlur={handlePassword} className="form-control" id="floatingPassword" placeholder="Password"/>
+                            <input type="password" onBlur={handlePassword} className="form-control" id="floatingPassword" placeholder="Password" required/>
                             <label htmlFor="floatingPassword">Password</label>
                         </div>
                         <p className='text-danger'><small>{error}</small></p>
@@ -50,8 +88,8 @@ const Login = () => {
               
                 <div className='d-flex justify-content-center'>
                     <button onClick={handleGoogleSignin} className='login-icon'><img src={google} alt="" /></button>
-                    <button onClick={facebookSign} className='login-icon'><img src={facebook} alt="" /></button>
-                    <button onClick={githubSign} className='login-icon'><img src={github} alt="" /></button>
+                        <button onClick={handleFacebookSignin} className='login-icon'><img src={facebook} alt="" /></button>
+                        <button onClick={handleGithubSignin} className='login-icon'><img src={github} alt="" /></button>
                     </div>
                </div>
             </div>

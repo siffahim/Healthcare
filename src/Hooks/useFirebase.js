@@ -42,15 +42,9 @@ const useFirebase = () => {
         })
     }
     //form login
-    const handleLogin = (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                setUser(result.user)
-                setError('');
-            }).catch(err => {
-                setError(err.message)
-            })
+    const handleLogin = () => {
+       return signInWithEmailAndPassword(auth, email, password)
+    
     }
 
     //google
@@ -61,23 +55,16 @@ const useFirebase = () => {
     }
     //facebook
     const facebookSign = () => {
+        setIsLoad(true)
         const facebookProvider = new FacebookAuthProvider()
-        signInWithPopup(auth, facebookProvider)
-            .then(result => {
-                setUser(result.user)
-            }).catch(err => {
-                setError(err.message)
-            })
+        return signInWithPopup(auth, facebookProvider)
+    
     }
     //github
     const githubSign = () => {
+        setIsLoad(true)
         const githubProvider = new GithubAuthProvider()
-        signInWithPopup(auth, githubProvider)
-            .then(result => {
-                setUser(result.user)
-            }).catch(err => {
-                setError(err.message)
-            })
+        return signInWithPopup(auth, githubProvider)
     }
 
     //logout
