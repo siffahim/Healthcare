@@ -1,0 +1,41 @@
+.info-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #19ce67e1;
+    color: #fff;
+    padding-left: 2%;
+    padding-right: 5%;
+}
+.info-text{
+    display: flex;
+}
+.bg-icon{
+    width: 60px;
+    height: 60px;
+    background-color:#fff;
+    color: #19ce67;
+    font-size: 2em;
+    border-radius: 50%;
+    margin-right: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.containr-trainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
+
+@media only screen and (max-width:688px){
+    .info-container{
+        flex-direction: column;
+    }
+    .info-text{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}

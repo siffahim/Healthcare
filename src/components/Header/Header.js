@@ -24,7 +24,9 @@ const Header = () => {
                     <Nav.Link as={Link} className='item' to="/link">Link</Nav.Link>
                     <Nav.Link as={Link} className='item' to="/about">About Us</Nav.Link>
                     {
-                        user.displayName && <img style={{width:'40px',height:'40px',borderRadius:'50%',marginRight:'5px'}} src={user.photoURL} alt="profile" />
+                        user.displayName && <div>
+                            <img style={{ width: '40px', height: '40px', borderRadius: '50%', marginRight: '5px' }} src={user.photoURL} alt={user.displayName} />
+                        </div>
                     }
                     {
                         user.displayName ? <button onClick={logOut} className='btn-fix'>Logout</button> : <Nav.Link as={Link} className='btn-fix' to="/login">Login</Nav.Link>
