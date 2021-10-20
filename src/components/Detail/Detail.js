@@ -21,7 +21,7 @@ const Detail = () => {
             <Row xs={1} md={1} className="g-4">
                     <Col>
                         <Card className='mb-5'>
-                        <Card.Img variant="top" className='mx-auto mt-2 shadow-lg' style={{ height: '300px', width: '300px', borderRadius: '50%', border:'10px solid #19ce67'}} src={matchedItem?.img} />
+                        <Card.Img variant="top" data-aos='fade-up' className='mx-auto mt-2 shadow-lg' style={{ height: '300px', width: '300px', borderRadius: '50%', border:'10px solid #19ce67'}} src={matchedItem?.img} />
                             <Card.Body>
                             <Card.Title><h3>{matchedItem?.name}</h3></Card.Title>
                                 <Card.Text>
@@ -29,7 +29,7 @@ const Detail = () => {
                             </Card.Text>
                             <h2 className="my-4">Speacialists</h2>
                             <div className='d-md-flex flex-xs-column text-center'>
-                                <div className='spe-list'>
+                                <div className='spe-list' data-aos='fade-up'>
                                     <img src={matchedItem?.speacialist[0]} alt="" />
                                     <div className='spe-content'>
                                         <h4>Dr. Robert Davis</h4>
@@ -37,7 +37,7 @@ const Detail = () => {
                                         <input className='bg-light mb-2 text-center' type="text" placeholder="Main Oparation Room" readOnly />
                                     </div>
                                 </div>
-                                <div className='spe-list'>
+                                <div className='spe-list' data-aos='fade-up'>
                                     <img src={matchedItem?.speacialist[1]} alt="" />
                                     <div className='spe-content'>
                                         <h4>Dr. Kristina Castle</h4>
@@ -45,7 +45,7 @@ const Detail = () => {
                                         <input className='bg-light mb-2 text-center' type="text" placeholder="1st Floor, 113-Room" readOnly />
                                     </div>
                                 </div>
-                                <div className='spe-list'>
+                                <div className='spe-list' data-aos='fade-up'>
                                     <img src={matchedItem?.speacialist[2]} alt="" />
                                     <div className='spe-content'>
                                         <h4>Dr. Helen Wilmore</h4>
