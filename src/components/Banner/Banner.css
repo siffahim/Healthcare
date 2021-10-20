@@ -22,3 +22,17 @@
         transform: scale(1.1);
     }
 }
+.image-aniamtion{
+    animation-name: doll;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes doll {
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+}

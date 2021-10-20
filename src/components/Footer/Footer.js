@@ -7,23 +7,23 @@ const Footer = () => {
         <div>
             <div className="footer-container">
                 <ul>
-                    <h3>About Green Life</h3>
+                    <p className='fs-5'><i class="fas fa-plus icon"></i> About Green Life</p>
                     <li><img style={{width:'200px',margin:'10px 0'}} src={log} alt="" /></li>
                     <p>The cosgrove staff members are well trained professionals, We will fax the requested records directly to the qualified doctors the day before or the day of the appointment.</p>
                     <button className='btn-regular'>More Detail <i className="fas fa-caret-right"></i></button>
                 </ul>
                 <ul>
-                    <h3>Departments</h3>
-                    <li>Cardiology</li>
-                    <li>Neurology</li>
-                    <li>Pediatric</li>
-                    <li>Dentel Care</li>
-                    <li>Urology</li>
-                    <li>Pulmonary</li>
-                    <li>Х-ray & CT Scan</li>
+                    <p className='fs-5'><i class="fas fa-plus icon"></i> Departments</p>
+                    <li><i class="fas fa-angle-right icon"></i> Cardiology</li>
+                    <li><i class="fas fa-angle-right icon"></i> Neurology</li>
+                    <li><i class="fas fa-angle-right icon"></i> Pediatric</li>
+                    <li><i class="fas fa-angle-right icon"></i> Dentel Care</li>
+                    <li><i class="fas fa-angle-right icon"></i> Urology</li>
+                    <li><i class="fas fa-angle-right icon"></i> Pulmonary</li>
+                    <li><i class="fas fa-angle-right icon"></i> Х-ray & CT Scan</li>
                 </ul>
                 <ul>
-                    <h3>Latest News & Tips</h3>
+                    <p className='fs-5'><i class="fas fa-plus icon"></i> Latest News & Tips</p>
                     <li>Cancer treatment for poor peoples
                         02th Dec 2021</li><hr />
                     <li>Hospitality Managements
@@ -34,7 +34,7 @@ const Footer = () => {
                         02th Dec 2021</li>
                 </ul>
                 <ul>
-                    <h3>Contact Details</h3>
+                    <p className='fs-5'><i class="fas fa-plus icon"></i> Contact Details</p>
                     <li>250 Main Street, Brooklyn, NY 52143, US</li>
                     <li><i className="icon me-1 fas fa-phone-alt"></i> +8809962457</li>
                     <li><i className="icon me-1 fas fa-envelope"></i> healthcare2021@gmail.com</li>

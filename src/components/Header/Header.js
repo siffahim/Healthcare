@@ -29,7 +29,7 @@ const Header = () => {
                         </div>
                     }
                     {
-                        user.displayName ? <button onClick={logOut} className='btn-fix'>Logout</button> : <Nav.Link as={Link} className='btn-fix' to="/login">Login</Nav.Link>
+                        user.displayName ? <button onClick={logOut} className='btn-fix'><i class="fas fa-sign-out-alt"></i> Logout</button> : <Nav.Link as={Link} className='btn-fix' to="/login">Login</Nav.Link>
                     }
                 </Navbar.Collapse>
             </Navbar>
