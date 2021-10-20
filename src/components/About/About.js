@@ -14,14 +14,16 @@ const About = () => {
     return (
         <Container>
             <div className='text-center'>
-                <h2 className='my-4 text-muted'>About Us</h2>
-                <p className='fs-5 icon'>Our Services Review from many peoples</p>
-                <img className='img-fluid' src={about} alt="" />
+                <div data-aos='fade-up'>
+                    <h2 className='my-4 text-muted'>About Us</h2>
+                    <p className='fs-5 icon'>Our Services Review from many peoples</p>
+                    <img className='img-fluid' src={about} alt="" />
+                </div>
                 <div className='about-form row mb-5'>
-                    <div className='col-md-6 col-12'>
+                    <div className='col-md-6 col-12' data-aos='fade-up'>
                         <img className='img-fluid' src={img} alt="" />
                     </div>
-                    <div className='col-md-6 col-12'>
+                    <div className='col-md-6 col-12' data-aos='slide-left'>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <h3 className='text-muted'>Contact Us</h3>
                             <input defaultValue={user.displayName} {...register("name")} />

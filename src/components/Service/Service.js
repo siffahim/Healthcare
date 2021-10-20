@@ -11,7 +11,7 @@ const Service = (props) => {
     }
     return (
         <Col>
-            <Card className='card'>
+            <Card className='card' data-aos='fade-up'>
                 <div className='img-div'>
                     <Card.Img variant="top" className='img' src={img} />
                 </div>

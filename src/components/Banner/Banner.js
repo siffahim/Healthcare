@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import banner from '../../image/doctor3.svg';
@@ -8,7 +9,7 @@ const Banner = () => {
         <div className='banner-container text-white'>
             <Container>
                 <div className='row gx-2 gy-5 d-flex align-items-center pt-5'>
-                    <div className='col-md-6 col-12'>
+                    <div className='col-md-6 col-12' data-aos="fade-up">
                         <p>Healthcare & madical center</p>
                         <h2>Green Life</h2>
                         <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
@@ -17,7 +18,7 @@ const Banner = () => {
                             <button className='btn-media ms-4'><i class="fas fa-play-circle"></i></button>
                         </div>
                     </div>
-                    <div className='col-md-6 col-12'>
+                    <div className='col-md-6 col-12' data-aos="slide-left">
                         <img className='img-fluid image-aniamtion'  src={banner} alt="" />
                     </div>
                 </div>
