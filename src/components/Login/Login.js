@@ -64,8 +64,8 @@ const Login = () => {
     }
     return (
         <Container>
-            <div className='w-50 my-2 mx-auto'>
-                <div className='form-content'>
+            <div className='row my-2 mx-auto'>
+                <div className='col-md-6 col-12 form-content'>
                     <div className='text-center'>
                         <img style={{ width: '50px' }} src='favicon.ico' alt="" />
                         <h2 className='my-2 mb-4 text-muted'>Log In</h2>

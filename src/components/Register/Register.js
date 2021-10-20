@@ -11,8 +11,8 @@ const Register = () => {
     const { handleName, handleEmail, handlePassword, handleRegister,error } = useAuth();
     return (
         <Container>
-            <div className='w-50 mx-auto my-4'>
-                <div className='form-content'>
+            <div className='row mx-auto my-4'>
+                <div className='col-md-6 col-12 form-content'>
                     <div className='text-center'>
                         <img style={{ width: '50px' }} src='favicon.ico' alt="" />
                         <h2 className='my-2 mb-4 text-muted'>Register</h2>
