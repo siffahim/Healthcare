@@ -21,7 +21,7 @@ const Detail = () => {
             <Row xs={1} md={1} className="g-4">
                     <Col>
                         <Card className='mb-5'>
-                        <Card.Img variant="top" style={{height:'500px'}} src={matchedItem?.img} />
+                        <Card.Img variant="top" className='mx-auto mt-2 shadow-lg' style={{ height: '300px', width: '300px', borderRadius: '50%', border:'10px solid #19ce67'}} src={matchedItem?.img} />
                             <Card.Body>
                             <Card.Title><h3>{matchedItem?.name}</h3></Card.Title>
                                 <Card.Text>
