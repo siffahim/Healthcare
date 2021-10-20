@@ -4,12 +4,13 @@ import { Redirect, Route } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user, isLoading } = useAuth()
+    const { user, isLoad } = useAuth()
     console.log(user)
-    console.log(isLoading)
-    if (isLoading) {
-        alert('i m loadong..')
-        return <Spinner animation="border" variant="primary" />
+    console.log(isLoad)
+    if (isLoad) {
+        return <div className='text-center p-5'>
+            <Spinner animation="grow" variant="dark" />
+        </div>
     }
     return (
         <Route

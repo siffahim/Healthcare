@@ -9,19 +9,20 @@ import './Login.css';
 
 
 const Login = () => {
-    const { googleSign,githubSign, facebookSign, handleLogin, handleEmail, handlePassword, error, setError, setUser, } = useAuth();
+    const { googleSign,githubSign, facebookSign, handleLogin, handleEmail, handlePassword, error, setError, setUser,isLoad,setIsLoad } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect_ui = location.state?.from || '/home';
-
+    console.log(isLoad)
     const handleGoogleSignin = () => {
+        setIsLoad(true)
         googleSign()
         .then(result => {
             setUser(result.user);
             history.push(redirect_ui);
         }).catch(err => {
             setError(err.message)
-        })
+        }).finally(()=> setIsLoad(false))
     }
     return (
         <Container>
