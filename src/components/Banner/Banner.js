@@ -18,7 +18,7 @@ const Banner = () => {
                             <button className='btn-media ms-4'><i class="fas fa-play-circle"></i></button>
                         </div>
                     </div>
-                    <div className='col-md-6 col-12' data-aos="slide-left">
+                    <div className='col-md-6 col-12' data-aos="fade-up">
                         <img className='img-fluid image-aniamtion'  src={banner} alt="" />
                     </div>
                 </div>

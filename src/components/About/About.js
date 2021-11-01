@@ -23,7 +23,7 @@ const About = () => {
                     <div className='col-md-6 col-12' data-aos='fade-up'>
                         <img className='img-fluid' src={img} alt="" />
                     </div>
-                    <div className='col-md-6 col-12' data-aos='slide-left'>
+                    <div className='col-md-6 col-12' data-aos='fade-up'>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <h3 className='text-muted'>Contact Us</h3>
                             <input defaultValue={user.displayName} {...register("name")} />

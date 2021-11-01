@@ -20,7 +20,7 @@ import Register from './components/Register/Register';
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1500,
+      duration: 1000,
       offset: 120, // offset (in px) from the original trigger point
       delay: 0, // values from 0 to 3000, with step 50ms
       easing: 'ease', // default easing for AOS animations

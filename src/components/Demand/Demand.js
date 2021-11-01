@@ -5,7 +5,7 @@ import './Demand.css';
 const Demand = () => {
     return (
         <div className='info-container'>
-            <img data-aos='slide-right' className='img-fluid' src={img} alt="" />
+            <img data-aos='fade-up' className='img-fluid' src={img} alt="" />
             <div className='containr-trainer' data-aos='fade-up'>
                 <div className='info-text'>
                     <div className='bg-icon'>
